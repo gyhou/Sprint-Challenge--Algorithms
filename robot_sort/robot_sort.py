@@ -99,39 +99,28 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        self.set_light_on()
+        self.set_light_on()  # Turn Bot on
         self.swap_item()  # Swap None out
+        
         while self.light_is_on():
             # Move greatest to right
             while self.can_move_right():
                 self.move_right()
                 if self.compare_item() == 1:
                     self.swap_item()
-            # Swap least greatest
-            while self.compare_item() == 1:
-                self.move_left()
-                if self.compare_item() == None:
-                    self.swap_item()
-                    self.set_light_off()
-                    break
-                elif self.compare_item() == -1:
-                    self.swap_item()
+
             if self.compare_item() == None:
+                self.swap_item()
+                self.set_light_off()
                 break
+
             # Move least to left
             while self.can_move_left():
                 self.move_left()
                 if self.compare_item() == None:
-                    self.swap_item()
-                    break
-                elif self.compare_item() == -1:
-                    self.swap_item()
-
-            if self.compare_item() == None:
-                if self.can_move_right():
-                    self.move_right()
                     self.swap_item()  # Swap None out
-                else:
+                    self.move_right()
+                    self.swap_item()
                     break
 
 
