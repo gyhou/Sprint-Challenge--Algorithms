@@ -103,12 +103,13 @@ class SortingRobot:
         self.swap_item()  # Swap None out
         
         while self.light_is_on():
-            # Move greatest to right
+            # Pick up the least value
             while self.can_move_right():
                 self.move_right()
                 if self.compare_item() == 1:
                     self.swap_item()
-
+                    
+            # If nothing to compare then sort is done
             if self.compare_item() == None:
                 self.swap_item()
                 self.set_light_off()
@@ -117,8 +118,9 @@ class SortingRobot:
             # Move least to left
             while self.can_move_left():
                 self.move_left()
+                # Swap least value with None
                 if self.compare_item() == None:
-                    self.swap_item()  # Swap None out
+                    self.swap_item()
                     self.move_right()
                     self.swap_item()
                     break
