@@ -29,6 +29,7 @@ for i in range(n): # O(n)
         sum += 1 # O(1)
 ```
 Constants are insignificant in run time so removed.
+
 Nested loops of n and n thus n*n
 
 Only `O(n^2)` remains
