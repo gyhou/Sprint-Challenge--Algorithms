@@ -64,12 +64,13 @@ target = floor f
 while low <= high
     mid floor = (low + high) / 2
     if target > mid floor:
-        low = mid
+        low = mid # change low floor to middle floor
     elif target < mid floor:
-        high = mid
+        high = mid # change high floor to middle floor
     else:
-        return mid
+        # if target not higher or lower than mid floor then mid is target floor
+        return mid 
 ```
-Binary search essentially is figuring out how many times to divide N (floors) until reaching 1 (target floor).
+Binary search essentially is figuring out how many times to divide N (floors) by 2 until reaching 1 (target floor).
 
 Thus `1 = N / 2^x` into `x*1 = log N`
