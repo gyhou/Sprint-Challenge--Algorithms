@@ -24,13 +24,14 @@ b)
 sum = 0 # O(1)
 for i in range(n): # O(n)
     j = 1 # O(1)
-    while j < n: # O(1) True/False
-    j *= 2 # O(1)
-    sum += 1 # O(1)
+    while j < n: # O(n)
+        j *= 2 # O(1)
+        sum += 1 # O(1)
 ```
 Constants are insignificant in run time so removed.
+Nested loops of n and n thus n*n
 
-Only `O(n)` remains
+Only `O(n^2)` remains
 
 c)  
 ```python
