@@ -30,9 +30,9 @@ for i in range(n): # O(n)
 ```
 Constants are insignificant in run time so removed.
 
-Nested loops of n and n thus n*n
+Nested loops of n and log n thus n * log n
 
-Only `O(n^2)` remains
+Only `O(n log n)` remains
 
 c)  
 ```python
@@ -73,4 +73,4 @@ while low <= high
 ```
 Binary search essentially is figuring out how many times to divide N (floors) by 2 until reaching 1 (target floor).
 
-Thus `1 = N / 2^x` into `x*1 = log N`
+Thus `1 = N / 2^x` into `x*1 = log N` 
